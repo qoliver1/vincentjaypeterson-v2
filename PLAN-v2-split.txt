@@ -1,0 +1,26 @@
+================================================================================
+PLAN: SPLIT DUAL-PAGES EXPERIMENT INTO TWO SIMPLE SEPARATE REPOS
+Completed: 2026-09-11
+================================================================================
+
+OVERALL GOAL
+------------
+Undo the complicated "two GitHub Pages sites from one repo via subdirectories"
+setup. End up with TWO completely separate, simple repositories.
+
+FINAL STATE (DONE)
+-------------------
+1. Repo A: qoliver1/vincentjaypeterson.org
+   - Branch: main (bbc1705)
+   - Simple workflow: build dist -> upload-pages-artifact -> deploy-pages
+   - Pages: https://qoliver1.github.io/vincentjaypeterson.org/ (built)
+   
+2. Repo B: qoliver1/vincentjaypeterson-v2
+   - Branch: main (1201f5e)
+   - Simple workflow: build dist -> upload-pages-artifact -> deploy-pages
+   - Pages: https://qoliver1.github.io/vincentjaypeterson-v2/ (built)
+
+BOTH SITES LIVE AND BUILD_STATUS: built
+
+Workflow uses GitHub-native actions/upload-pages-artifact@v3 + 
+actions/deploy-pages@v4. No dual-Pages, no eslint/prettier, no BASE_PATH.
